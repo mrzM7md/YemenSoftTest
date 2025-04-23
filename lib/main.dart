@@ -1,0 +1,44 @@
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:yemen_soft_test/core/values/images.dart';
+
+import 'block_observer.dart';
+import 'core/services/setup_service_locator.dart';
+import 'features/login/presentaion/login_page.dart';
+import 'generated/l10n.dart';
+
+void main() {
+  Bloc.observer = MyBlocObserver();
+
+  SetupServiceLocator().init();
+
+  runApp(const OnyxApp());
+}
+
+class OnyxApp extends StatelessWidget {
+  const OnyxApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      builder: (context, child) {
+        return MaterialApp(
+          localizationsDelegates: [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          debugShowCheckedModeBanner: false,
+          home: const LoginPage(),
+        );
+      },
+    );
+  }
+}

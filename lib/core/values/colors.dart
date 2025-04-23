@@ -1,0 +1,1 @@
+const int backgroundColor = 0xff0A192F;

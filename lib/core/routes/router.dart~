@@ -1,0 +1,54 @@
+import 'package:drivers/features/control_panel/business/control_panel_logic/control_panel_logic.dart';
+import 'package:drivers/features/control_panel/business/control_panel_methods/control_panel_methods.dart';
+import 'package:drivers/features/control_panel/business/control_panel_state_management/control_panel_cubit.dart';
+import 'package:drivers/features/control_panel/presentation/control_panel_page.dart';
+import 'package:drivers/features/login/business/login_logic/login_logic.dart';
+import 'package:drivers/features/login/business/login_methods/login_methods.dart';
+import 'package:drivers/features/login/business/login_state_management/login_cubit.dart';
+import 'package:drivers/features/login/presentaion/login_page.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+
+import '../services/setup_service_locator.dart';
+
+part 'router.g.dart';
+
+// class DashboardRoute extends StatelessWidget {
+//   const DashboardRoute({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) =>
+//           ControlPanelCubit(
+//               baseControlPanelMethods: sl<ControlPanelMethods>()
+//           ),
+//       child: ControlPanelPage(),
+//     );
+//   }
+// }
+
+class LoginRoute extends StatelessWidget {
+  const LoginRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => LoginCubit(baseLoginMethods: LoginMethods(baseLoginLogic: LoginLogic())),
+      child: LoginPage(),
+    );
+  }
+}
+
+// class OnboardingRoute extends StatelessWidget {
+//   const OnboardingRoute({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => OnboardingCubit(onboardingActionsRepo: sl<OnboardingActions>()),
+//       child: OnboardingPage(),
+//     );
+//   }
+// }

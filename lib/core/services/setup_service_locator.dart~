@@ -1,0 +1,14 @@
+import 'package:drivers/features/control_panel/business/control_panel_logic/control_panel_logic.dart';
+import 'package:drivers/features/control_panel/business/control_panel_methods/control_panel_methods.dart';
+import 'package:get_it/get_it.dart';
+
+final sl = GetIt.instance;
+
+class SetupServiceLocator {
+  void init() {
+    // sl.registerLazySingleton(() => ControlPanelLogic());
+    // sl.registerLazySingleton(() => ControlPanelMethods(
+    //   baseControlPanelLogic: sl<ControlPanelLogic>()
+    // ));
+  }
+}
