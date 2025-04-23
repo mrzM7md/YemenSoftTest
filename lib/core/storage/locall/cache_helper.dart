@@ -4,7 +4,8 @@ class CacheHelper {
 
   static late SharedPreferences sharedPreferences;
 
-  static const String lanCacheKey = "lan";
+  static final String lanCacheKey = "lan";
+  static final String deliveryNameKey = "deliveryName";
 
   static init() async {
     sharedPreferences = await SharedPreferences.getInstance();

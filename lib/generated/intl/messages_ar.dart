@@ -22,17 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "an_error_occurs": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
     "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "check_internet_network_connection": MessageLookupByLibrary.simpleMessage(
+      "تحقق من اتصال الانترنت",
+    ),
     "choose_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "log_back_into_your_account": MessageLookupByLibrary.simpleMessage(
       "سجل الدخول إلى حسابك",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "login_has_been_successfully": MessageLookupByLibrary.simpleMessage(
+      "تم تسجيل الدخول بنجاح",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "required": MessageLookupByLibrary.simpleMessage("مطلوب"),
     "show_more": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
     "user_id": MessageLookupByLibrary.simpleMessage("معرف المستخدم"),
+    "username_or_pass_not_correct": MessageLookupByLibrary.simpleMessage(
+      "اسم المستخدم أو كلمة المرور غير صحيحة",
+    ),
     "welcome_back": MessageLookupByLibrary.simpleMessage("أهلًا بعودتك!"),
   };
 }

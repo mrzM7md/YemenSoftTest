@@ -1,0 +1,34 @@
+class Data {
+  String? deliveryName;
+
+  Data({this.deliveryName});
+
+  Data.fromJson(Map<String, dynamic> json) {
+    deliveryName = json['DeliveryName'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['DeliveryName'] = this.deliveryName;
+    return data;
+  }
+}
+
+class Result {
+  int? errNo;
+  String? errMsg;
+
+  Result({this.errNo, this.errMsg});
+
+  Result.fromJson(Map<String, dynamic> json) {
+    errNo = json['ErrNo'];
+    errMsg = json['ErrMsg'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['ErrNo'] = this.errNo;
+    data['ErrMsg'] = this.errMsg;
+    return data;
+  }
+}

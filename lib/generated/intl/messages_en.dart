@@ -22,17 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "an_error_occurs": MessageLookupByLibrary.simpleMessage("an error occurs"),
     "apply": MessageLookupByLibrary.simpleMessage("Apply"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+    "check_internet_network_connection": MessageLookupByLibrary.simpleMessage(
+      "check internet network connection",
+    ),
     "choose_language": MessageLookupByLibrary.simpleMessage("Choose Language"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "log_back_into_your_account": MessageLookupByLibrary.simpleMessage(
       "Log back into your account",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Log In"),
+    "login_has_been_successfully": MessageLookupByLibrary.simpleMessage(
+      "login has been successfully",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "required": MessageLookupByLibrary.simpleMessage("required"),
     "show_more": MessageLookupByLibrary.simpleMessage("Show More"),
     "user_id": MessageLookupByLibrary.simpleMessage("User Id"),
+    "username_or_pass_not_correct": MessageLookupByLibrary.simpleMessage(
+      "user name or password not correct",
+    ),
     "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back!"),
   };
 }

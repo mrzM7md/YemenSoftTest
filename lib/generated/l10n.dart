@@ -119,6 +119,51 @@ class S {
   String get apply {
     return Intl.message('Apply', name: 'apply', desc: '', args: []);
   }
+
+  /// `required`
+  String get required {
+    return Intl.message('required', name: 'required', desc: '', args: []);
+  }
+
+  /// `user name or password not correct`
+  String get username_or_pass_not_correct {
+    return Intl.message(
+      'user name or password not correct',
+      name: 'username_or_pass_not_correct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `login has been successfully`
+  String get login_has_been_successfully {
+    return Intl.message(
+      'login has been successfully',
+      name: 'login_has_been_successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `an error occurs`
+  String get an_error_occurs {
+    return Intl.message(
+      'an error occurs',
+      name: 'an_error_occurs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `check internet network connection`
+  String get check_internet_network_connection {
+    return Intl.message(
+      'check internet network connection',
+      name: 'check_internet_network_connection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

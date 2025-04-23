@@ -8,5 +8,12 @@
   "arabic": "العربية",
   "english": "English",
   "choose_language": "اختر لغة",
-  "apply": "تطبيق"
+  "apply": "تطبيق",
+  "required": "مطلوب",
+
+  "username_or_pass_not_correct": "اسم المستخدم أو كلمة المرور غير صحيحة",
+  "login_has_been_successfully": "تم تسجيل الدخول بنجاح",
+  "an_error_occurs": "حدث خطأ ما",
+  "check_internet_network_connection": "تحقق من اتصال الانترنت",
+
 }
