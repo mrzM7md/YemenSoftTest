@@ -4,17 +4,20 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:yemen_soft_test/core/values/images.dart';
 
 import '../../../core/components/widgets_components.dart';
+import '../../../generated/l10n.dart';
+import 'dialogs/languages_dialogs.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    S loc = S.of(context);
     return Center(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
-          child: Container(
+          child: SizedBox(
             height: MediaQuery.sizeOf(context).height,
             child: Stack(
               children: [
@@ -30,7 +33,9 @@ class LoginPage extends StatelessWidget {
                         child: CircleAvatar(
                           backgroundColor: const Color(0xFFD12A1F),
                           radius: 20.r,
-                          child: const Icon(Icons.language, color: Colors.white),
+                          child:  IconButton(onPressed: (){
+                            showLanguagesDialog(context: context);
+                          }, icon: Icon(Icons.language, color: Colors.white)),
                         ),
                       ),
 
@@ -38,7 +43,7 @@ class LoginPage extends StatelessWidget {
 
                       // Welcome Back Text
                       Text(
-                        'Welcome Back!',
+                        loc.welcome_back,
                         style: GoogleFonts.cairo(
                           fontSize: 24.sp,
                           fontWeight: FontWeight.bold,
@@ -47,7 +52,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       SizedBox(height: 8.h),
                       Text(
-                        'Log back into your account',
+                        loc.log_back_into_your_account,
                         style: GoogleFonts.poppins(
                           fontSize: 14.sp,
                           color: Colors.grey[700],
@@ -56,16 +61,16 @@ class LoginPage extends StatelessWidget {
                       SizedBox(height: 32.h),
 
                       // Input Fields
-                      getAppTextField('User ID'),
+                      getAppTextField(loc.user_id),
                       SizedBox(height: 16.h),
-                      getAppTextField('Password', obscureText: true),
+                      getAppTextField(loc.password, obscureText: true),
                       SizedBox(height: 10.h),
 
                       // Show More
                       Align(
                         alignment: Alignment.centerRight,
                         child: Text(
-                          'Show More',
+                          loc.show_more,
                           style: GoogleFonts.poppins(
                             fontSize: 14.sp,
                             color: Colors.blueAccent,
@@ -89,7 +94,7 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                           child: Text(
-                            'Log in',
+                            loc.login,
                             style: GoogleFonts.poppins(
                               fontSize: 16.sp,
                               color: Colors.white,

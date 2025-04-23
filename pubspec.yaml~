@@ -27,8 +27,11 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
- :
+dependencies:
   flutter:
+    sdk: flutter
+
+  flutter_localizations:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,9 +66,6 @@ environment:
 
   # local storage
   sqflite: ^2.3.2
-
-  flutter_localizations:
-    sdk: flutter
 
 dev_dependencies:
   flutter_test:

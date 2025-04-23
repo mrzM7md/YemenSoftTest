@@ -1,0 +1,4 @@
+enum Languages {
+  ARABIC,
+  ENGLISH
+}

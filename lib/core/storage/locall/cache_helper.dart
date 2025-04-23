@@ -4,10 +4,11 @@ class CacheHelper {
 
   static late SharedPreferences sharedPreferences;
 
+  static const String lanCacheKey = "lan";
+
   static init() async {
     sharedPreferences = await SharedPreferences.getInstance();
   }
-
 
   static bool? getBool({
     required String key,

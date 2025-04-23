@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ar locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,21 +18,21 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "apply": MessageLookupByLibrary.simpleMessage("Apply"),
+    "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
-    "choose_language": MessageLookupByLibrary.simpleMessage("Choose Language"),
+    "choose_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "log_back_into_your_account": MessageLookupByLibrary.simpleMessage(
-      "Log back into your account",
+      "سجل الدخول إلى حسابك",
     ),
-    "login": MessageLookupByLibrary.simpleMessage("Log In"),
-    "password": MessageLookupByLibrary.simpleMessage("Password"),
-    "show_more": MessageLookupByLibrary.simpleMessage("Show More"),
-    "user_id": MessageLookupByLibrary.simpleMessage("User Id"),
-    "welcome_back": MessageLookupByLibrary.simpleMessage("Welcome back!"),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "show_more": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
+    "user_id": MessageLookupByLibrary.simpleMessage("معرف المستخدم"),
+    "welcome_back": MessageLookupByLibrary.simpleMessage("أهلًا بعودتك!"),
   };
 }

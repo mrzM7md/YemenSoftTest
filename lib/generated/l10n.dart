@@ -54,13 +54,81 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `Welcome back!`
+  String get welcome_back {
+    return Intl.message(
+      'Welcome back!',
+      name: 'welcome_back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log back into your account`
+  String get log_back_into_your_account {
+    return Intl.message(
+      'Log back into your account',
+      name: 'log_back_into_your_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Id`
+  String get user_id {
+    return Intl.message('User Id', name: 'user_id', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Log In`
+  String get login {
+    return Intl.message('Log In', name: 'login', desc: '', args: []);
+  }
+
+  /// `Show More`
+  String get show_more {
+    return Intl.message('Show More', name: 'show_more', desc: '', args: []);
+  }
+
+  /// `العربية`
+  String get arabic {
+    return Intl.message('العربية', name: 'arabic', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `Choose Language`
+  String get choose_language {
+    return Intl.message(
+      'Choose Language',
+      name: 'choose_language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message('Apply', name: 'apply', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
   const AppLocalizationDelegate();
 
   List<Locale> get supportedLocales {
-    return const <Locale>[Locale.fromSubtags(languageCode: 'en')];
+    return const <Locale>[
+      Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'ar'),
+    ];
   }
 
   @override
