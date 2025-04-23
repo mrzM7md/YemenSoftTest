@@ -26,7 +26,6 @@ class LanguageSelectionAlertDialogState extends State<LanguageSelectionAlertDial
     return AlertDialog(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       backgroundColor: Colors.white,
-      contentPadding: EdgeInsetsDirectional.all(22.r),
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -110,7 +109,6 @@ class LanguageSelectionAlertDialogState extends State<LanguageSelectionAlertDial
         onTap: onTap,
         child: Container(
           height: 70.h,
-          padding: const EdgeInsets.symmetric(horizontal: 10),
           decoration: BoxDecoration(
             color: isSelected ? Colors.greenAccent.shade100 : Colors.white,
             borderRadius: BorderRadius.circular(14),

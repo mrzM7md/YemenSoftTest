@@ -13,6 +13,8 @@ import 'features/login/presentaion/login_page.dart';
 import 'generated/l10n.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   Bloc.observer = MyBlocObserver();
 
   await CacheHelper.init();

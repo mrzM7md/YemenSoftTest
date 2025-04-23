@@ -80,8 +80,8 @@ class LanguageSelectionAlertDialogState extends State<LanguageSelectionAlertDial
                 } else {
                   CacheHelper.setData(key: CacheHelper.lanCacheKey, value: 'ar');
                 }
-                AppCubit.get(context).loadGlobalAppState();
                 Navigator.of(context).pop(); // استخدام Navigator.of(context).pop() لإغلاق AlertDialog
+                AppCubit.get(context).loadGlobalAppState();
               },
               child: Text(
                 lan.apply,

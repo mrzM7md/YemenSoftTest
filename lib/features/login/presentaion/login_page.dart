@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:yemen_soft_test/core/methods/langs_methods.dart';
 import 'package:yemen_soft_test/core/values/images.dart';
 
 import '../../../core/components/widgets_components.dart';
@@ -13,34 +15,51 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     S loc = S.of(context);
-    return Center(
+    return SafeArea(child: Center(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: SizedBox(
             height: MediaQuery.sizeOf(context).height,
-            child: Stack(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(loginBackgroundImage, fit: BoxFit.fill, height: double.infinity, width:  double.infinity,),
-                Padding(
+                Column(
+                  children: [
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Padding(padding: EdgeInsetsDirectional.only(start: !isRTL() ? 15.r : 0),
+                          child: SvgPicture.asset(
+                              appLogoSvgImage),
+                          ),
+                          Stack(
+                            alignment: AlignmentDirectional.centerEnd,
+                            children: [
+                              RotatedBox(
+                                quarterTurns:  isRTL() ? 3 : 4 ,
+                                child:  SvgPicture.asset(
+                                  redCornerSvgImage,
+                                ),
+                              ),
+                              IconButton(
+                                  onPressed: (){
+                                    showLanguagesDialog(context: context);
+                                  }, icon: Icon(Icons.language, color: Colors.white)),
+                            ],
+                          ),
+                        ]
+                    ),
+                  ],
+                ),
+
+                Expanded(child:
+                Container(
                   padding: EdgeInsets.symmetric(horizontal: 24.w),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(height: 16.h),
-                      Align(
-                        alignment: AlignmentDirectional.topEnd,
-                        child: CircleAvatar(
-                          backgroundColor: const Color(0xFFD12A1F),
-                          radius: 20.r,
-                          child:  IconButton(onPressed: (){
-                            showLanguagesDialog(context: context);
-                          }, icon: Icon(Icons.language, color: Colors.white)),
-                        ),
-                      ),
-
                       SizedBox(height: 200.h),
-
                       // Welcome Back Text
                       Text(
                         loc.welcome_back,
@@ -103,19 +122,20 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
 
-                      const Spacer(),
-
                       // Illustration
                       SizedBox(height: 16.h),
+                      Expanded(child:SvgPicture.asset(deliverySvgImage, fit: BoxFit.fill,)
+                      )
                     ],
                   ),
+                )
                 ),
               ],
             ),
           ),
         ),
       ),
-    );
+    ));
   }
 
 }
