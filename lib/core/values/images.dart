@@ -5,3 +5,7 @@ const String enLanSvgImage = "$_assetsPath/english_lan.svg";
 const String deliverySvgImage = "$_assetsPath/delivery.svg";
 const String redCornerSvgImage = "$_assetsPath/red_corner.svg";
 const String appLogoSvgImage = "$_assetsPath/app_logo.svg";
+const String blueCornerImage = "$_assetsPath/blue_corner.png";
+const String noDataImage = "$_assetsPath/no_data.png";
+const String loadingGifImage = "$_assetsPath/loading.gif";
+const String deliverMmanImage = "$_assetsPath/deliveryman.png";

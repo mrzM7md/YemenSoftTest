@@ -14,5 +14,18 @@
   "username_or_pass_not_correct": "user name or password not correct",
   "login_has_been_successfully": "login has been successfully",
   "an_error_occurs": "an error occurs",
-  "check_internet_network_connection": "check internet network connection"
+  "check_internet_network_connection": "check internet network connection",
+  "new_": "New",
+  "others": "Others",
+  "order_details": "Order Detail",
+  "status": "Status",
+  "total_price": "Total Price",
+  "date": "Date",
+  "there_is_no_data_to_display": "There is no data to display",
+  "no_orders_yet": "No orders yet",
+  "You_dont_have_any_orders_in_your_history": "You don't have any orders in your history.",
+  "new_status": "جديدة",
+  "on_delivering": "قيد التسليم",
+  "delivered": "تم التسليم",
+  "returned": "تم إرجاعها"
 }

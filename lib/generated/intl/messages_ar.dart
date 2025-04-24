@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "You_dont_have_any_orders_in_your_history":
+        MessageLookupByLibrary.simpleMessage("لا توجد أي طلبات في سجلك"),
     "an_error_occurs": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
     "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
@@ -29,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "تحقق من اتصال الانترنت",
     ),
     "choose_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
+    "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
+    "delivered": MessageLookupByLibrary.simpleMessage("Delivered"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "log_back_into_your_account": MessageLookupByLibrary.simpleMessage(
       "سجل الدخول إلى حسابك",
@@ -37,9 +41,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "login_has_been_successfully": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح",
     ),
+    "new_": MessageLookupByLibrary.simpleMessage("جديد"),
+    "new_status": MessageLookupByLibrary.simpleMessage("New"),
+    "no_orders_yet": MessageLookupByLibrary.simpleMessage(
+      "لا توجد طلبات حتى الآن",
+    ),
+    "on_delivering": MessageLookupByLibrary.simpleMessage("Delivering"),
+    "order_details": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
+    "others": MessageLookupByLibrary.simpleMessage("أخرى"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "required": MessageLookupByLibrary.simpleMessage("مطلوب"),
+    "returned": MessageLookupByLibrary.simpleMessage("Returned"),
     "show_more": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
+    "status": MessageLookupByLibrary.simpleMessage("الحالة"),
+    "there_is_no_data_to_display": MessageLookupByLibrary.simpleMessage(
+      "لا توجد بيانات للعرض",
+    ),
+    "total_price": MessageLookupByLibrary.simpleMessage("السعر الكلي"),
     "user_id": MessageLookupByLibrary.simpleMessage("معرف المستخدم"),
     "username_or_pass_not_correct": MessageLookupByLibrary.simpleMessage(
       "اسم المستخدم أو كلمة المرور غير صحيحة",

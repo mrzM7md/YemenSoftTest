@@ -164,6 +164,96 @@ class S {
       args: [],
     );
   }
+
+  /// `New`
+  String get new_ {
+    return Intl.message('New', name: 'new_', desc: '', args: []);
+  }
+
+  /// `Others`
+  String get others {
+    return Intl.message('Others', name: 'others', desc: '', args: []);
+  }
+
+  /// `Order Detail`
+  String get order_details {
+    return Intl.message(
+      'Order Detail',
+      name: 'order_details',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Status`
+  String get status {
+    return Intl.message('Status', name: 'status', desc: '', args: []);
+  }
+
+  /// `Total Price`
+  String get total_price {
+    return Intl.message('Total Price', name: 'total_price', desc: '', args: []);
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message('Date', name: 'date', desc: '', args: []);
+  }
+
+  /// `There is no data to display`
+  String get there_is_no_data_to_display {
+    return Intl.message(
+      'There is no data to display',
+      name: 'there_is_no_data_to_display',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No orders yet`
+  String get no_orders_yet {
+    return Intl.message(
+      'No orders yet',
+      name: 'no_orders_yet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You don't have any orders in your history.`
+  String get You_dont_have_any_orders_in_your_history {
+    return Intl.message(
+      'You don\'t have any orders in your history.',
+      name: 'You_dont_have_any_orders_in_your_history',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `جديدة`
+  String get new_status {
+    return Intl.message('جديدة', name: 'new_status', desc: '', args: []);
+  }
+
+  /// `قيد التسليم`
+  String get on_delivering {
+    return Intl.message(
+      'قيد التسليم',
+      name: 'on_delivering',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم التسليم`
+  String get delivered {
+    return Intl.message('تم التسليم', name: 'delivered', desc: '', args: []);
+  }
+
+  /// `تم إرجاعها`
+  String get returned {
+    return Intl.message('تم إرجاعها', name: 'returned', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

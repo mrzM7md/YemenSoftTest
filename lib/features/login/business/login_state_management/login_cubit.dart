@@ -20,7 +20,7 @@ class LoginCubit extends Cubit<LoginState> {
     result.fold((l) => emit(
         SignInAccountState(message: l.message, isLoaded: true, isSuccess: false)
     ), (r) {
-      baseLoginMethods.baseLoginLogic.storeDeliveryNameOnCache(deliveryName: r.data.deliveryName ?? "---") ;
+      baseLoginMethods.baseLoginLogic.storeDeliverInfoOnCache(deliveryName: r.data.deliveryName ?? "--", deliveryUsername: user.deliveryNo ?? "--") ;
       emit(
           SignInAccountState(message: r.message, isLoaded: true, isSuccess: true)
       );

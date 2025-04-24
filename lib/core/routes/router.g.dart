@@ -3,7 +3,7 @@
 part of 'router.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: '/login',
+  initialLocation: LoginRoute().location,
 
   routes: [
     GoRoute(

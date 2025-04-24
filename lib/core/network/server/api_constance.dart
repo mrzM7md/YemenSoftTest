@@ -13,6 +13,9 @@ class ApiConstance {
 
   // ################ START LOGIN ENDPOINTS LINK ################
   static const String loginLink = "$_httpServerLink/OnyxDeliveryService/Service.svc/CheckDeliveryLogin";
+  static const String getOrdersLink = "$_httpServerLink/OnyxDeliveryService/Service.svc/GetDeliveryBillsItems";
+
+
 
   // static String httpLinkGetAllCourses(
   //         {required int pageNumber,

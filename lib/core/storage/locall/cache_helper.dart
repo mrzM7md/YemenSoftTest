@@ -6,6 +6,7 @@ class CacheHelper {
 
   static final String lanCacheKey = "lan";
   static final String deliveryNameKey = "deliveryName";
+  static final String deliveryUsernameKey = "deliveryUsername";
 
   static init() async {
     sharedPreferences = await SharedPreferences.getInstance();

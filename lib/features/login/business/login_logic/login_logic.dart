@@ -3,7 +3,8 @@ import 'package:yemen_soft_test/features/login/business/login_logic/base_login_l
 
 class LoginLogic implements BaseLoginLogic {
   @override
-  void storeDeliveryNameOnCache({required String deliveryName}) {
+  void storeDeliverInfoOnCache({required String deliveryName, required String deliveryUsername}) {
     CacheHelper.setData(key: CacheHelper.deliveryNameKey, value: deliveryName);
+    CacheHelper.setData(key: CacheHelper.deliveryUsernameKey, value: deliveryUsername);
   }
 }

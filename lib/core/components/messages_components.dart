@@ -18,11 +18,11 @@ void showMessage({
         Expanded(
           child: Text(
             message,
-            style: TextStyle(color: Color(textColor), fontSize: 12.sp),
+            style: TextStyle(color: Color(blackColor), fontSize: 12.sp),
           ),
         ),
         IconButton(
-          icon: Icon(Icons.close, color: Color(textColor)),
+          icon: Icon(Icons.close, color: Color(blackColor)),
           onPressed: () {
             // إغلاق الرسالة عند النقر على الزر
             ScaffoldMessenger.of(context).hideCurrentSnackBar();

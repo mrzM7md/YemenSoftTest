@@ -1,0 +1,4 @@
+enum OrderType {
+  NEW,
+  OTHERS
+}

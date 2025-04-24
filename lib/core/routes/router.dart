@@ -4,6 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:yemen_soft_test/features/login/business/login_logic/login_logic.dart';
 import 'package:yemen_soft_test/features/login/business/login_methods/login_methods.dart';
 import 'package:yemen_soft_test/features/login/business/login_state_management/login_cubit.dart';
+import 'package:yemen_soft_test/features/orders/business/orders_logic/orders_logic.dart';
+import 'package:yemen_soft_test/features/orders/business/orders_methods/orders_methods.dart';
+import 'package:yemen_soft_test/features/orders/business/orders_state_management/orders_cubit.dart';
 import 'package:yemen_soft_test/features/orders/presentaion/orders_page.dart';
 
 import '../../features/login/presentaion/login_page.dart';
@@ -31,7 +34,6 @@ class LoginRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext mainContext) {
-    print("Here");
     return BlocProvider(
       create: (context) => LoginCubit(baseLoginMethods: LoginMethods(
           baseLoginLogic: LoginLogic(),
@@ -47,10 +49,9 @@ class OrdersRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OrdersPage();
-    // return BlocProvider(
-    //   create: (context) => OnboardingCubit(onboardingActionsRepo: sl<OnboardingActions>()),
-    //   child: OnboardingPage(),
-    // );
+    return BlocProvider(
+      create: (context) => OrdersCubit(baseOrdersMethods: OrdersMethods(baseOrdersLogic: OrdersLogic(), context: context)),
+      child: OrdersPage(),
+    );
   }
 }

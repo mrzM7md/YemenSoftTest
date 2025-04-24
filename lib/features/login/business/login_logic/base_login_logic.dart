@@ -1,3 +1,3 @@
 abstract class BaseLoginLogic {
-  void storeDeliveryNameOnCache({required String deliveryName});
+  void storeDeliverInfoOnCache({required String deliveryName, required String deliveryUsername});
 }

@@ -4,13 +4,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yemen_soft_test/core/routes/router.dart';
-import 'package:yemen_soft_test/features/business/app_logic/app_logic.dart';
+import 'package:yemen_soft_test/core/storage/locall/sqldb.dart';
 import 'package:yemen_soft_test/features/business/app_methods/app_methods.dart';
 import 'package:yemen_soft_test/features/business/app_state_management/app_cubit.dart';
 import 'block_observer.dart';
 import 'core/services/setup_service_locator.dart';
 import 'core/storage/locall/cache_helper.dart';
-import 'features/login/presentaion/login_page.dart';
 import 'generated/l10n.dart';
 
 void main() async {
@@ -21,6 +20,8 @@ void main() async {
   await CacheHelper.init();
 
   SetupServiceLocator().init();
+
+  sl<SqlDb>().initialDb();
 
   runApp(BlocProvider(
     create: (context) =>
@@ -54,6 +55,9 @@ class OnyxApp extends StatelessWidget {
           supportedLocales: S.delegate.supportedLocales,
           debugShowCheckedModeBanner: false,
           routerConfig: router,
+          theme: ThemeData(
+            fontFamily: "Montserrat",
+          ),
         );
       },
     );
