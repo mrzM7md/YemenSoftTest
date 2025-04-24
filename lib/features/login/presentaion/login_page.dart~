@@ -141,8 +141,6 @@ class _LoginPageState extends State<LoginPage> {
                                   listener: (context, state) {
                                     if(state is SignInAccountState){
                                       if(state.isSuccess){
-                                        usernameController.text = "";
-                                        passController.text = "";
                                         OrdersRoute().push(context);
                                       }else{
                                         showMessage(context: context, message: state.message, isSuccess: state.isSuccess);

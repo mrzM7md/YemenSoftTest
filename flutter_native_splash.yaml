@@ -1,0 +1,12 @@
+flutter_native_splash:
+  color: "#FFFFFF" # لون الخلفية الافتراضي (اختياري)
+  image: assets/images/splash.png # مسار الصورة المستطيلة الخاصة بك
+
+  android: true
+  ios: true
+
+  fullscreen: true # لجعل الشاشة تملأ كامل مساحة العرض (بدون شريط الحالة أو شريط التنقل إذا أمكن)
+  android_gravity: fill # لتوسيع الصورة لملء كامل العرض والارتفاع
+  ios_content_mode: scaleAspectFill # لتوسيع الصورة مع الحفاظ على نسبة العرض إلى الارتفاع وملء الحدود (قد يتم قص بعض الأجزاء)
+  # أو يمكنك تجربة:
+  # ios_content_mode: scaleToFill # لتوسيع الصورة لتناسب الأبعاد بالضبط (قد يؤدي إلى تشويه)
