@@ -54,6 +54,7 @@ class OrderCartWidget extends StatelessWidget {
                         Text(fromOrderStatusNumToWord(orderResponseModel.bILLTYPE.toString(), context),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                              fontSize: 12.sp,
                             color: fromOrderStatusNumToColor(orderResponseModel.bILLTYPE.toString())
                           ),
                         ),
@@ -68,7 +69,7 @@ class OrderCartWidget extends StatelessWidget {
                       children: [
                         Text(S.of(context).total_price),
                         Text(getSimpleNum(num: orderResponseModel.bILLAMT), style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold, fontSize: 12.sp
                         ),),
                       ],
                     ),
@@ -81,7 +82,7 @@ class OrderCartWidget extends StatelessWidget {
                       children: [
                         Text(S.of(context).date),
                         Text(orderResponseModel.bILLDATE ?? "--", style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.bold, fontSize: 12.sp
                         ),),
                       ],
                     ),

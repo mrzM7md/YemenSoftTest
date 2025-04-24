@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "choose_language": MessageLookupByLibrary.simpleMessage("اختر لغة"),
     "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
-    "delivered": MessageLookupByLibrary.simpleMessage("Delivered"),
+    "delivered": MessageLookupByLibrary.simpleMessage("تم التسليم"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
     "log_back_into_your_account": MessageLookupByLibrary.simpleMessage(
       "سجل الدخول إلى حسابك",
@@ -42,16 +42,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم تسجيل الدخول بنجاح",
     ),
     "new_": MessageLookupByLibrary.simpleMessage("جديد"),
-    "new_status": MessageLookupByLibrary.simpleMessage("New"),
+    "new_status": MessageLookupByLibrary.simpleMessage("جديدة"),
     "no_orders_yet": MessageLookupByLibrary.simpleMessage(
       "لا توجد طلبات حتى الآن",
     ),
-    "on_delivering": MessageLookupByLibrary.simpleMessage("Delivering"),
+    "on_delivering": MessageLookupByLibrary.simpleMessage("قيد التسليم"),
     "order_details": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
     "others": MessageLookupByLibrary.simpleMessage("أخرى"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "required": MessageLookupByLibrary.simpleMessage("مطلوب"),
-    "returned": MessageLookupByLibrary.simpleMessage("Returned"),
+    "returned": MessageLookupByLibrary.simpleMessage("تم إرجاعها"),
     "show_more": MessageLookupByLibrary.simpleMessage("عرض المزيد"),
     "status": MessageLookupByLibrary.simpleMessage("الحالة"),
     "there_is_no_data_to_display": MessageLookupByLibrary.simpleMessage(

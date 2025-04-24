@@ -230,29 +230,29 @@ class S {
     );
   }
 
-  /// `جديدة`
+  /// `New`
   String get new_status {
-    return Intl.message('جديدة', name: 'new_status', desc: '', args: []);
+    return Intl.message('New', name: 'new_status', desc: '', args: []);
   }
 
-  /// `قيد التسليم`
+  /// `Delivering`
   String get on_delivering {
     return Intl.message(
-      'قيد التسليم',
+      'Delivering',
       name: 'on_delivering',
       desc: '',
       args: [],
     );
   }
 
-  /// `تم التسليم`
+  /// `Delivered`
   String get delivered {
-    return Intl.message('تم التسليم', name: 'delivered', desc: '', args: []);
+    return Intl.message('Delivered', name: 'delivered', desc: '', args: []);
   }
 
-  /// `تم إرجاعها`
+  /// `Returned`
   String get returned {
-    return Intl.message('تم إرجاعها', name: 'returned', desc: '', args: []);
+    return Intl.message('Returned', name: 'returned', desc: '', args: []);
   }
 }
 

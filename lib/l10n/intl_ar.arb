@@ -24,8 +24,9 @@
   "there_is_no_data_to_display": "لا توجد بيانات للعرض",
   "no_orders_yet": "لا توجد طلبات حتى الآن",
   "You_dont_have_any_orders_in_your_history": "لا توجد أي طلبات في سجلك",
-  "new_status": "New",
-  "on_delivering": "Delivering",
-  "delivered": "Delivered",
-  "returned": "Returned"
+
+  "new_status": "جديدة",
+  "on_delivering": "قيد التسليم",
+  "delivered": "تم التسليم",
+  "returned": "تم إرجاعها"
 }

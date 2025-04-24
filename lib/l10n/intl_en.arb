@@ -24,8 +24,8 @@
   "there_is_no_data_to_display": "There is no data to display",
   "no_orders_yet": "No orders yet",
   "You_dont_have_any_orders_in_your_history": "You don't have any orders in your history.",
-  "new_status": "جديدة",
-  "on_delivering": "قيد التسليم",
-  "delivered": "تم التسليم",
-  "returned": "تم إرجاعها"
+  "new_status": "New",
+  "on_delivering": "Delivering",
+  "delivered": "Delivered",
+  "returned": "Returned"
 }
