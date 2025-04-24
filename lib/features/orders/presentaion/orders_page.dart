@@ -31,7 +31,7 @@ class _OrdersPageState extends State<OrdersPage> {
   late OrdersCubit ordersCubit;
 
   Timer? _inactivityTimer;
-  static const int _inactivityThresholdSeconds = 30; // المدة التي سيبقى التطبيق ينتظر إذا المستخدم لم يفعل شيء
+  static const int _inactivityThresholdSeconds = 120; // المدة التي سيبقى التطبيق ينتظر إذا المستخدم لم يفعل شيء
 
   OrderType selectedOrderType = OrderType.NEW;
 
@@ -43,6 +43,7 @@ class _OrdersPageState extends State<OrdersPage> {
           orderRequest: OrderRequestModel(
               pDLVRYNO: getDeliveryUsername(),
               pLANGNO: "${getCurrentLanNumberFromSymbol()}"));
+
     _startInactivityTimer();
   }
 
@@ -170,7 +171,6 @@ class _OrdersPageState extends State<OrdersPage> {
       child: Row(
         mainAxisSize: MainAxisSize.min, // لجعل حجم Row مناسبًا للمحتوى
         children: [
-          // زر "New"
           Expanded(
               child: InkWell(
                 onTap: () {

@@ -31,7 +31,9 @@ class _OrdersPageState extends State<OrdersPage> {
   late OrdersCubit ordersCubit;
 
   Timer? _inactivityTimer;
-  static const int _inactivityThresholdSeconds = 30; // المدة التي سيبقى التطبيق ينتظر إذا المستخدم لم يفعل شيء
+  static const int _inactivityThresholdSeconds = 120; // المدة التي سيبقى التطبيق ينتظر إذا المستخدم لم يفعل شيء
+
+  OrderType selectedOrderType = OrderType.NEW;
 
   @override
   void initState() {
@@ -41,6 +43,7 @@ class _OrdersPageState extends State<OrdersPage> {
           orderRequest: OrderRequestModel(
               pDLVRYNO: getDeliveryUsername(),
               pLANGNO: "${getCurrentLanNumberFromSymbol()}"));
+
     _startInactivityTimer();
   }
 
@@ -91,7 +94,7 @@ class _OrdersPageState extends State<OrdersPage> {
                       SizedBox(
                         height: 20.h,
                       ),
-                      TabBarWidget(),
+                      getTabBarWidget(),
                       SizedBox(
                         height: 20.h,
                       ),
@@ -115,6 +118,11 @@ class _OrdersPageState extends State<OrdersPage> {
                                         List orders = ordersCubit.baseOrdersMethods
                                             .baseOrdersLogic
                                             .getOrders();
+
+                                        if(selectedOrderType == OrderType.NEW){
+                                          orders = orders
+                                              .where((order) => order.bILLTYPE == "1").toList();
+                                        }
 
                                         if (orders.isEmpty) {
                                           return const NoDataWidget();
@@ -142,22 +150,8 @@ class _OrdersPageState extends State<OrdersPage> {
           )),
     );
   }
-}
 
-
-
-class TabBarWidget extends StatefulWidget {
-  const TabBarWidget({super.key});
-
-  @override
-  State<TabBarWidget> createState() => _TabBarWidgetState();
-}
-
-class _TabBarWidgetState extends State<TabBarWidget> {
-  OrderType selectedOrderType = OrderType.NEW;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget getTabBarWidget(){
     return Container(
       width: MediaQuery.sizeOf(context).width / 1.5,
       decoration: BoxDecoration(
@@ -201,7 +195,7 @@ class _TabBarWidgetState extends State<TabBarWidget> {
                     style: TextStyle(
                       color: selectedOrderType == OrderType.NEW
                           ? Colors.white
-                         : Color(mainAppColor),
+                          : Color(mainAppColor),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -242,4 +236,5 @@ class _TabBarWidgetState extends State<TabBarWidget> {
       ),
     );
   }
+
 }
